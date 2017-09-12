@@ -29,23 +29,17 @@ exit.IfWrap(err, "something went wrong")
 exit.IfWrapf(err, "%s", message)
 ```
 
-## Automated conversion
-
-A [gofix](https://blog.golang.org/introducing-gofix)-compatible tool
-provided by this library
-automatically converts all possible expressions in the source code.
-Install it via:
+## Installation
 
 ```
 go get github.com/Originate/exit
 ```
 
-then run:
-
-```
-exitfix .
-```
-
+Then run `exitfix .` to convert all your source code
+fully automatically to the new format.
+This is made possible via a
+[gofix](https://blog.golang.org/introducing-gofix)-compatible tool
+provided by this library.
 It can also stream source code via STDIN and STDOUT.
 Full usage details including list of available fixes:
 
