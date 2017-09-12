@@ -43,12 +43,12 @@ go get github.com/Originate/exit
 then run:
 
 ```
-exitfixes .
+exitfix .
 ```
 
 It can also stream source code via STDIN and STDOUT.
 Full usage details including list of available fixes:
 
 ```
-exitfixes -h
+exitfix -h
 ```

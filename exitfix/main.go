@@ -42,7 +42,7 @@ var doDiff = flag.Bool("diff", false, "display diffs instead of rewriting files"
 const debug = false // display incorrectly reformatted source and exit
 
 func usage() {
-	fmt.Fprintf(os.Stderr, "usage: exitfixes [-diff] [-r fixname,...] [-force fixname,...] [path ...]\n")
+	fmt.Fprintf(os.Stderr, "usage: exitfix [-diff] [-r fixname,...] [-force fixname,...] [path ...]\n")
 	flag.PrintDefaults()
 	fmt.Fprintf(os.Stderr, "\nAvailable rewrites are:\n")
 	sort.Sort(byName(fixes))

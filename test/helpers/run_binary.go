@@ -7,11 +7,11 @@ import (
 	"testing"
 )
 
-// RunBinary runs the "exitfixes" binary in the test directory
+// RunBinary runs the "exitfix" binary in the test directory
 func RunBinary(dirname string, t *testing.T) {
 	cmd := exec.Cmd{
-		Path: path.Join(GetGoPath(), "bin", "exitfixes"),
-		Args: []string{"exitfixes", "."},
+		Path: path.Join(GetGoPath(), "bin", "exitfix"),
+		Args: []string{"exitfix", "."},
 		Dir:  dirname,
 	}
 	output, err := cmd.CombinedOutput()
