@@ -17,6 +17,7 @@ import (
 	"os"
 	"os/exec"
 	"path/filepath"
+	"regexp"
 	"runtime"
 	"sort"
 	"strings"
@@ -184,6 +185,10 @@ func processFile(filename string, useStdin bool) error {
 	if err != nil {
 		return err
 	}
+
+	// Remove empty lines after the fix
+	re := regexp.MustCompile("(exit.If\\(.*?\\))\n")
+	newSrc = re.ReplaceAll(newSrc, []byte("$1"))
 
 	if *doDiff {
 		data, err := diff(src, newSrc)
