@@ -9,7 +9,6 @@ import (
 	"testing"
 
 	"github.com/Originate/exit/test/helpers"
-
 	"github.com/cf-guardian/guardian/kernel/fileutils"
 )
 
