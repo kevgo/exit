@@ -1,4 +1,4 @@
-package testhelpers
+package helpers
 
 import (
 	"io/ioutil"
@@ -7,7 +7,7 @@ import (
 
 // FixtureNames returns the names of all testdata fixtures
 func FixtureNames(t *testing.T) []string {
-	testDirs, err := ioutil.ReadDir("./testdata")
+	testDirs, err := ioutil.ReadDir("./test/examples")
 	if err != nil {
 		t.Fatal(err)
 	}
