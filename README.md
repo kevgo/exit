@@ -20,7 +20,7 @@ import "github.com/Originate/exit"
 exit.If(err)
 ```
 
-The `ifWrap` and `ifWrapf` functions wrap the given error
+The `IfWrap` and `IfWrapf` functions wrap the given error
 into the given error message using [errors.Wrap](https://godoc.org/github.com/pkg/errors#Wrap)
 and [errors.Wrapf](https://godoc.org/github.com/pkg/errors#Wrapf):
 
@@ -33,7 +33,7 @@ exit.IfWrapf(err, "%s", message)
 
 A [gofix](https://blog.golang.org/introducing-gofix)-compatible tool
 provided by this library
-automatically converts all possible areas in the source code.
+automatically converts all possible expressions in the source code.
 Install it via:
 
 ```
@@ -43,7 +43,7 @@ go get github.com/Originate/exit
 then run:
 
 ```
-exitfixes ./...
+exitfixes .
 ```
 
 It can also stream source code via STDIN and STDOUT.
