@@ -17,7 +17,7 @@ you can write:
 ```go
 import "github.com/Originate/exit"
 
-exit.if(err)
+exit.If(err)
 ```
 
 The `ifWrap` and `ifWrapf` functions wrap the given error
@@ -25,8 +25,8 @@ into the given error message using [errors.Wrap](https://godoc.org/github.com/pk
 and [errors.Wrapf](https://godoc.org/github.com/pkg/errors#Wrapf):
 
 ```go
-exit.ifWrap(err, "something went wrong")
-exit.ifWrapf(err, "%s", message)
+exit.IfWrap(err, "something went wrong")
+exit.IfWrapf(err, "%s", message)
 ```
 
 ## Automated conversion

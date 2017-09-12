@@ -3,17 +3,16 @@ package main
 import (
 	"errors"
 	"fmt"
-	"log"
+
+	"github.com/Originate/exit"
 )
 
 func test() {
 	err := errors.New("foo")
-	if err != nil {
-		log.Fatal(err)
-	}
+	exit.If(err)
+
 	fmt.Println("done")
-	if err != nil {
-		log.Fatal(err)
-	}
+	exit.If(err)
+
 	fmt.Println("done")
 }

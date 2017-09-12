@@ -99,7 +99,7 @@ func fixLogFatal(file *ast.File) bool {
 			return true
 		}
 
-		// replace the if-expression with a call to "exit.On({var})"
+		// replace the if-expression with a call to "exit.If({var})"
 		newExprStmt := &ast.ExprStmt{
 			X: &ast.CallExpr{
 				Fun: &ast.SelectorExpr{
@@ -107,7 +107,7 @@ func fixLogFatal(file *ast.File) bool {
 						Name: "exit",
 					},
 					Sel: &ast.Ident{
-						Name: "On",
+						Name: "If",
 					},
 				},
 				Args: []ast.Expr{
