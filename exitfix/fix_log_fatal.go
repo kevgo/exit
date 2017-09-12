@@ -114,6 +114,12 @@ func fixLogFatal(file *ast.File) bool {
 		}
 		SetField(parent, name, index, newExprStmt)
 
+		// optionally insert the init condition of the if-statement
+		parentBlockStmt, ok := parent.(*ast.BlockStmt)
+		if ifStmt.Init != nil && ok {
+			insertIntoBlockStmt(parentBlockStmt, index, ifStmt.Init)
+		}
+
 		// Add the import
 		astutil.AddImport(fset, file, "github.com/Originate/exit")
 
@@ -123,4 +129,8 @@ func fixLogFatal(file *ast.File) bool {
 
 	Apply(file, fixFunc, nil)
 	return fixed
+}
+
+func insertIntoBlockStmt(blockStmt *ast.BlockStmt, index int, stmt ast.Stmt) {
+	blockStmt.List = append(blockStmt.List[:index], append([]ast.Stmt{stmt}, blockStmt.List[index:]...)...)
 }
