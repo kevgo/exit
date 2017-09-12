@@ -56,9 +56,6 @@ func fixLogFatal(file *ast.File) bool {
 		if !ok {
 			return true
 		}
-		if ifCondExprXIdent.Obj.Kind != ast.Var {
-			return true
-		}
 
 		// ensure that the block of the if-statement only contains a call to log.Fatal
 		if len(ifStmt.Body.List) != 1 {
