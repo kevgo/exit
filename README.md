@@ -34,15 +34,3 @@ exit.IfWrapf(err, "%s", message)
 ```
 go get github.com/Originate/exit
 ```
-
-Then run `exitfix .` to convert all your source code
-fully automatically to the new format.
-This is made possible via a
-[gofix](https://blog.golang.org/introducing-gofix)-compatible tool
-provided by this library.
-It can also stream source code via STDIN and STDOUT.
-Full usage details including list of available fixes:
-
-```
-exitfix -h
-```
