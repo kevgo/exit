@@ -11,3 +11,9 @@ $ bin/setup
 ```
 $ bin/spec
 ```
+
+## Building exitfix from source
+
+```
+$ go install ./exitfix
+```
