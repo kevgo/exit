@@ -36,3 +36,5 @@ exit.IfWrapf(err, "%s", message)
 ```
 go get github.com/Originate/exit
 ```
+
+A gofix tool to change all compatible usages is available at [exitfix](https://github.com/kevgo/exitfix).
