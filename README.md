@@ -31,6 +31,9 @@ exit.IfWrap(err, "something went wrong")
 exit.IfWrapf(err, "%s", message)
 ```
 
+This makes the most sense for critical errors in Go-based CLI tools,
+but could be useful elsewhere.
+
 ## Installation
 
 ```
