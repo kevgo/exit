@@ -1,6 +1,7 @@
 # Nifty error handling for Golang
 
 [![Go Report Card](https://goreportcard.com/badge/github.com/Originate/exit)](https://goreportcard.com/report/github.com/Originate/exit)
+[![GolangCI](https://golangci.com/badges/github.com/golangci/golangci-web.svg)](https://golangci.com)
 
 This library provides helper methods to dry up repetitive boilerplate around error checking in Golang.
 
